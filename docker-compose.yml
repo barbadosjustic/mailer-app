@@ -1,0 +1,19 @@
+services:
+  mailer-backend:
+    build: ./backend
+    container_name: mailer-backend
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  mailer-frontend:
+    build: ./frontend
+    container_name: mailer-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - mailer-backend
+    restart: unless-stopped
+
