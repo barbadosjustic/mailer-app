@@ -30,7 +30,7 @@ APP_DIR="$HOME/mailer"
 
 if [ ! -d "$APP_DIR" ]; then
   echo "📥 Cloning repository..."
-  git clone https://github.com/YOUR_ORG/mailer.git "$APP_DIR"
+  git clone https://github.com/barbadosjustic/mailer-app.git "$APP_DIR"
 else
   echo "🔄 Updating repository..."
   cd "$APP_DIR"
